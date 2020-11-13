@@ -11,10 +11,11 @@ use Spryker\Zed\Search\Business\Model\Elasticsearch\DataMapper\PageMapBuilderInt
 
 /**
  * @method \FondOfSpryker\Zed\ProductListPriceProductPriceListPageSearch\Business\ProductListPriceProductPriceListPageSearchFacadeInterface getFacade()
+ * @method \FondOfSpryker\Zed\ProductListPriceProductPriceListPageSearch\Communication\ProductListPriceProductPriceListPageSearchCommunicationFactory getFactory()
  */
 class ProductListPriceProductAbstractPriceListPageMapExpanderPlugin extends AbstractPlugin implements PriceProductAbstractPriceListPageMapExpanderPluginInterface
 {
-    protected const DATA_KEY_PRODUCT_LIST_MAP = 'product_list_map';
+    protected const DATA_KEY_PRODUCT_LIST_MAP = 'productListMap';
 
     /**
      * @param \Generated\Shared\Transfer\PageMapTransfer $pageMapTransfer

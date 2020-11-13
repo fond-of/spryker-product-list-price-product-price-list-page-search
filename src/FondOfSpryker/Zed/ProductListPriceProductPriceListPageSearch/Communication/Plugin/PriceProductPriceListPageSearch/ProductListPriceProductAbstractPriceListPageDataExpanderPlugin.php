@@ -12,16 +12,14 @@ use Spryker\Zed\Kernel\Communication\AbstractPlugin;
 class ProductListPriceProductAbstractPriceListPageDataExpanderPlugin extends AbstractPlugin implements PriceProductAbstractPriceListPageDataExpanderPluginInterface
 {
     /**
-     * @param array $data
      * @param \Generated\Shared\Transfer\PriceProductPriceListPageSearchTransfer $priceProductPriceListPageSearchTransfer
      *
-     * @return void
+     * @return \Generated\Shared\Transfer\PriceProductPriceListPageSearchTransfer
      */
     public function expand(
-        array $data,
         PriceProductPriceListPageSearchTransfer $priceProductPriceListPageSearchTransfer
-    ): void {
-        $this->getFacade()->expandPriceProductAbstractPriceListPageSearchWithProductLists(
+    ): PriceProductPriceListPageSearchTransfer {
+        return $this->getFacade()->expandPriceProductAbstractPriceListPageSearchWithProductLists(
             $priceProductPriceListPageSearchTransfer
         );
     }

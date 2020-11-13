@@ -48,7 +48,7 @@ class ProductListPriceProductAbstractPriceListPageMapExpanderPluginTest extends 
             ->getMock();
 
         $this->data = [
-            'product_list_map' => [],
+            'productListMap' => [],
         ];
 
         $this->localeTransferMock = $this->getMockBuilder(LocaleTransfer::class)

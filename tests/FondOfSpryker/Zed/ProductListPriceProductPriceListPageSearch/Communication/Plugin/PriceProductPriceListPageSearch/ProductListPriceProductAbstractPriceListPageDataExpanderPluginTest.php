@@ -75,7 +75,6 @@ class ProductListPriceProductAbstractPriceListPageDataExpanderPluginTest extends
             ->willReturn($this->priceProductPriceListPageSearchTransferTransferMock);
 
         $this->productListPriceProductAbstractPriceListPageDataExpanderPlugin->expand(
-            [],
             $this->priceProductPriceListPageSearchTransferTransferMock
         );
     }

@@ -8,20 +8,19 @@ use Spryker\Zed\Kernel\Communication\AbstractPlugin;
 
 /**
  * @method \FondOfSpryker\Zed\ProductListPriceProductPriceListPageSearch\Business\ProductListPriceProductPriceListPageSearchFacadeInterface getFacade()
+ * @method \FondOfSpryker\Zed\ProductListPriceProductPriceListPageSearch\Communication\ProductListPriceProductPriceListPageSearchCommunicationFactory getFactory()
  */
 class ProductListPriceProductConcretePriceListPageDataExpanderPlugin extends AbstractPlugin implements PriceProductConcretePriceListPageDataExpanderPluginInterface
 {
     /**
-     * @param array $data
      * @param \Generated\Shared\Transfer\PriceProductPriceListPageSearchTransfer $priceProductPriceListPageSearchTransfer
      *
-     * @return void
+     * @return \Generated\Shared\Transfer\PriceProductPriceListPageSearchTransfer
      */
     public function expand(
-        array $data,
         PriceProductPriceListPageSearchTransfer $priceProductPriceListPageSearchTransfer
-    ): void {
-        $this->getFacade()->expandPriceProductConcretePriceListPageSearchWithProductLists(
+    ): PriceProductPriceListPageSearchTransfer {
+        return $this->getFacade()->expandPriceProductConcretePriceListPageSearchWithProductLists(
             $priceProductPriceListPageSearchTransfer
         );
     }
