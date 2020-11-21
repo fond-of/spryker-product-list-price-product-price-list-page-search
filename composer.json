@@ -9,7 +9,12 @@
     }
   ],
   "require": {
-    "php": ">=7.2"
+    "php": ">=7.2",
+    "fond-of-spryker/price-product-price-list-page-search": "dev-dev-spryker_upgrade",
+    "fond-of-spryker/price-product-price-list-page-search-extension": "dev-master",
+    "spryker/event-behavior": "^1.0.0",
+    "spryker/product": "^6.11.0",
+    "spryker/product-list": "^1.2.0"
   },
   "require-dev": {
     "fond-of-codeception/spryker": "dev-master as 1.0.0",
