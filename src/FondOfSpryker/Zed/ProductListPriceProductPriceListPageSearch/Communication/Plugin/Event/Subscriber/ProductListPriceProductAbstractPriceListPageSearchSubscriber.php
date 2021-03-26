@@ -8,6 +8,10 @@ use Spryker\Zed\Event\Dependency\Plugin\EventSubscriberInterface;
 use Spryker\Zed\Kernel\Communication\AbstractPlugin;
 use Spryker\Zed\ProductList\Dependency\ProductListEvents;
 
+/**
+ * @method \FondOfSpryker\Zed\ProductListPriceProductPriceListPageSearch\Business\ProductListPriceProductPriceListPageSearchFacadeInterface getFacade()
+ * @method \FondOfSpryker\Zed\ProductListPriceProductPriceListPageSearch\Communication\ProductListPriceProductPriceListPageSearchCommunicationFactory getFactory()
+ */
 class ProductListPriceProductAbstractPriceListPageSearchSubscriber extends AbstractPlugin implements EventSubscriberInterface
 {
     /**
