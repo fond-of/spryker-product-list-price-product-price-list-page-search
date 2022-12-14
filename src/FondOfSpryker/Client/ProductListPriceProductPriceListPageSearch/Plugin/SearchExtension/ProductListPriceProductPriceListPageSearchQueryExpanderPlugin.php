@@ -1,6 +1,6 @@
 <?php
 
-namespace FondOfSpryker\Client\ProductListPriceProductPriceListPageSearch\Plugin\Search;
+namespace FondOfSpryker\Client\ProductListPriceProductPriceListPageSearch\Plugin\SearchExtension;
 
 use Elastica\Query;
 use Elastica\Query\BoolQuery;
@@ -10,16 +10,19 @@ use Generated\Shared\Transfer\CustomerProductListCollectionTransfer;
 use Generated\Shared\Transfer\CustomerTransfer;
 use InvalidArgumentException;
 use Spryker\Client\Kernel\AbstractPlugin;
-use Spryker\Client\Search\Dependency\Plugin\QueryExpanderPluginInterface;
-use Spryker\Client\Search\Dependency\Plugin\QueryInterface;
+use Spryker\Client\SearchExtension\Dependency\Plugin\QueryExpanderPluginInterface;
+use Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface;
 
+/**
+ * @method \FondOfSpryker\Client\ProductListPriceProductPriceListPageSearch\ProductListPriceProductPriceListPageSearchFactory getFactory()
+ */
 class ProductListPriceProductPriceListPageSearchQueryExpanderPlugin extends AbstractPlugin implements QueryExpanderPluginInterface
 {
     /**
-     * @param \Spryker\Client\Search\Dependency\Plugin\QueryInterface $searchQuery
+     * @param \Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface $searchQuery
      * @param array $requestParameters
      *
-     * @return \Spryker\Client\Search\Dependency\Plugin\QueryInterface
+     * @return \Spryker\Client\SearchExtension\Dependency\Plugin\QueryInterface
      */
     public function expandQuery(QueryInterface $searchQuery, array $requestParameters = []): QueryInterface
     {

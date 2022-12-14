@@ -52,6 +52,24 @@ abstract class AbstractPriceProductPriceListPageSearchExpander implements PriceP
      *
      * @return \Generated\Shared\Transfer\PriceProductPriceListPageSearchTransfer
      */
+    abstract protected function expandWithWhitelistIds(
+        PriceProductPriceListPageSearchTransfer $priceProductPriceListPageSearchTransfer
+    ): PriceProductPriceListPageSearchTransfer;
+
+    /**
+     * @param \Generated\Shared\Transfer\PriceProductPriceListPageSearchTransfer $priceProductPriceListPageSearchTransfer
+     *
+     * @return \Generated\Shared\Transfer\PriceProductPriceListPageSearchTransfer
+     */
+    abstract protected function expandWithBlacklistIds(
+        PriceProductPriceListPageSearchTransfer $priceProductPriceListPageSearchTransfer
+    ): PriceProductPriceListPageSearchTransfer;
+
+    /**
+     * @param \Generated\Shared\Transfer\PriceProductPriceListPageSearchTransfer $priceProductPriceListPageSearchTransfer
+     *
+     * @return \Generated\Shared\Transfer\PriceProductPriceListPageSearchTransfer
+     */
     protected function sanitize(
         PriceProductPriceListPageSearchTransfer $priceProductPriceListPageSearchTransfer
     ): PriceProductPriceListPageSearchTransfer {

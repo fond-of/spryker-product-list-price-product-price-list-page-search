@@ -19,8 +19,6 @@ class ProductListPriceProductAbstractPriceListPageSearchListener extends Abstrac
      * @param \Spryker\Shared\Kernel\Transfer\TransferInterface[] $transfers
      * @param string $eventName
      *
-     * @throws
-     *
      * @return void
      */
     public function handleBulk(array $transfers, $eventName): void

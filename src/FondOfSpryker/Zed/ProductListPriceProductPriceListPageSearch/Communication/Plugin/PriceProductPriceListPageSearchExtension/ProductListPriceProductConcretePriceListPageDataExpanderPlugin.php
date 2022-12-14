@@ -1,8 +1,8 @@
 <?php
 
-namespace FondOfSpryker\Zed\ProductListPriceProductPriceListPageSearch\Communication\Plugin\PriceProductPriceListPageSearch;
+namespace FondOfSpryker\Zed\ProductListPriceProductPriceListPageSearch\Communication\Plugin\PriceProductPriceListPageSearchExtension;
 
-use FondOfSpryker\Zed\PriceProductPriceListPageSearch\Dependency\Plugin\PriceProductConcretePriceListPageDataExpanderPluginInterface;
+use FondOfSpryker\Zed\PriceProductPriceListPageSearchExtension\Dependency\Plugin\PriceProductConcretePriceListPageDataExpanderPluginInterface;
 use Generated\Shared\Transfer\PriceProductPriceListPageSearchTransfer;
 use Spryker\Zed\Kernel\Communication\AbstractPlugin;
 
@@ -17,9 +17,8 @@ class ProductListPriceProductConcretePriceListPageDataExpanderPlugin extends Abs
      *
      * @return \Generated\Shared\Transfer\PriceProductPriceListPageSearchTransfer
      */
-    public function expand(
-        PriceProductPriceListPageSearchTransfer $priceProductPriceListPageSearchTransfer
-    ): PriceProductPriceListPageSearchTransfer {
+    public function expand(PriceProductPriceListPageSearchTransfer $priceProductPriceListPageSearchTransfer): PriceProductPriceListPageSearchTransfer
+    {
         return $this->getFacade()->expandPriceProductConcretePriceListPageSearchWithProductLists(
             $priceProductPriceListPageSearchTransfer
         );
