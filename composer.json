@@ -17,11 +17,9 @@
     "spryker/product-list": "^1.2.0"
   },
   "require-dev": {
-    "fond-of-codeception/spryker": "^1.0",
-    "spryker/code-sniffer": "^0.12",
-    "codeception/codeception": "^2.4",
-    "sebastian/phpcpd": "^4.0",
-    "php-coveralls/php-coveralls": "^2.1"
+    "fond-of-codeception/spryker": "*",
+    "spryker/code-sniffer": "*",
+    "codeception/codeception": "5.0.7"
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
@@ -33,7 +31,13 @@
   "autoload-dev": {
     "psr-4": {
       "FondOfSpryker\\": "tests/FondOfSpryker/",
-      "Generated\\": "src/Generated/"
+      "Generated\\": "src/Generated/",
+      "Orm\\": "src/Orm/"
+    }
+  },
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
     }
   }
 }

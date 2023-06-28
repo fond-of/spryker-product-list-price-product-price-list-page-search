@@ -12,7 +12,7 @@ class ProductListPriceProductPriceListPageSearchToEventBehaviorFacadeBridgeTest 
     /**
      * @var \PHPUnit\Framework\MockObject\MockObject|\Spryker\Zed\EventBehavior\Business\EventBehaviorFacadeInterface
      */
-    protected $eventBehaviorFacadeMock;
+    protected $facadeMock;
 
     /**
      * @var \PHPUnit\Framework\MockObject\MockObject[]|\Generated\Shared\Transfer\EventEntityTransfer[]
@@ -32,14 +32,14 @@ class ProductListPriceProductPriceListPageSearchToEventBehaviorFacadeBridgeTest 
     /**
      * @var \FondOfSpryker\Zed\ProductListPriceProductPriceListPageSearch\Dependency\Facade\ProductListPriceProductPriceListPageSearchToEventBehaviorFacadeBridge
      */
-    protected $productListPriceProductPriceListPageSearchToEventBehaviorFacadeBridge;
+    protected $bridge;
 
     /**
      * @return void
      */
     protected function _before(): void
     {
-        $this->eventBehaviorFacadeMock = $this->getMockBuilder(EventBehaviorFacadeInterface::class)
+        $this->facadeMock = $this->getMockBuilder(EventBehaviorFacadeInterface::class)
             ->disableOriginalConstructor()
             ->getMock();
 
@@ -53,8 +53,8 @@ class ProductListPriceProductPriceListPageSearchToEventBehaviorFacadeBridgeTest 
 
         $this->foreignKeyColumnName = 'foreign-key-column-name';
 
-        $this->productListPriceProductPriceListPageSearchToEventBehaviorFacadeBridge = new ProductListConditionalAvailabilityPageSearchToEventBehaviorFacadeBridge(
-            $this->eventBehaviorFacadeMock
+        $this->bridge = new ProductListPriceProductPriceListPageSearchToEventBehaviorFacadeBridge(
+            $this->facadeMock
         );
     }
 
@@ -63,13 +63,13 @@ class ProductListPriceProductPriceListPageSearchToEventBehaviorFacadeBridgeTest 
      */
     public function testGetEventTransferForeignKeys(): void
     {
-        $this->eventBehaviorFacadeMock->expects(self::atLeastOnce())
+        $this->facadeMock->expects(self::atLeastOnce())
             ->method('getEventTransferForeignKeys')
             ->with($this->eventTransfers, $this->foreignKeyColumnName)
             ->willReturn([]);
 
         self::assertIsArray(
-            $this->productListPriceProductPriceListPageSearchToEventBehaviorFacadeBridge->getEventTransferForeignKeys(
+            $this->bridge->getEventTransferForeignKeys(
                 $this->eventTransfers,
                 $this->foreignKeyColumnName
             )

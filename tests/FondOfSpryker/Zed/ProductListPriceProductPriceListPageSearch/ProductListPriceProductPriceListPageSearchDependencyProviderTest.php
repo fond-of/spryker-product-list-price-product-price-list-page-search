@@ -10,10 +10,10 @@ use FondOfSpryker\Zed\ProductListPriceProductPriceListPageSearch\Dependency\Faca
 use FondOfSpryker\Zed\ProductListPriceProductPriceListPageSearch\Dependency\Facade\ProductListPriceProductPriceListPageSearchToProductListFacadeBridge;
 use Spryker\Shared\Kernel\BundleProxy;
 use Spryker\Zed\EventBehavior\Business\EventBehaviorFacadeInterface;
+use Spryker\Zed\Kernel\Container;
 use Spryker\Zed\Kernel\Locator;
 use Spryker\Zed\Product\Business\ProductFacadeInterface;
 use Spryker\Zed\ProductList\Business\ProductListFacadeInterface;
-use Spryker\Zed\Testify\Locator\Business\Container;
 
 class ProductListPriceProductPriceListPageSearchDependencyProviderTest extends Unit
 {
